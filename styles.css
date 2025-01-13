@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    display: inline-block;
+}
+
+body {
+    font-family: "PT Serif", serif;
+    text-shadow: 2px 2px 4px gray;
+}
+
+h3 {
+    font-family: "Ubuntu", serif;
+    color: #293577;
+    text-shadow: 2px 2px 4px gray;
+}
+
+/* padding funciona : arriba derecha abajo izquierda.. 1px 4 lados - 1px 1px arab deriz - 1px 1px 1px arr deriz aba*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /*recordatorio space between hace que se acomoden primero izq y desp derecha lso btn de ui*/
+    align-items: center;
+    background-color: #FFF8E1;
+    padding: 10px 20px;
+    border-bottom: 3px solid #E0E0E0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF8E1;
+    padding: 20px 40px;
+    border-top: 2px solid #E0E0E0;
+}
+
+.favicon {
+    height: 32px;
+    width: 32px;
+}
+
+.logoIndex {
+    display: flex;
+    height: 100px;
+    width: auto;
+}
+
+.logoFooter {
+  
+    height: 100px;
+    width: auto;
+}
+
+/* menu de opciones*/
+.menu {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    /*gap 0 para usar flex-grow en cada etiqueta <a> y que ocupen todo el espacio*/
+}
+
+.menu a {
+    text-decoration: none;
+    text-align: center;
+    color: #3F51B5;
+    background-color: #FFF8E1;
+    border-color: #E0E0E0;
+    padding: 5px 10px;
+    border-style: solid;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+}
+
+/* mostrar pagina seleccionada y activa"*/
+.menu a.activo {
+    background-color: #E0E0E0;
+}
+
+/*mouse over etiquitas <a>*/
+.menu a:hover {
+    background-color: #3F51B5;
+    color: white;
+    border-color: #3F51B5;
+}
+
+/*div header para UI*/
+.accionesUI {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    background-color: white;
+    border: 2px solid #3F51B5;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: #3F51B5;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #3F51B5;
+    color: white;
+}
+
+.btnCarrito {
+    width: 20px;
+    height: 20px;
+}
+
+input.buscador {
+    display: flex;
+    border: 2px solid #3F51B5;
+    border-radius: 5px;
+    background: url(./Assets/busqueda.png) no-repeat left 5px center;
+    background-size: 15px;
+    padding: 5px 5px 5px 30px;
+    font-size: 14px;
+    background-color: white;
+    color: #3F51B5;
+    box-sizing: border-box;
+    height: auto;
+    width: 150%;
+}
+
+input.buscador:focus {
+    border-color: #3F51B5;
+    outline: none;
+}
+
+.div_logo_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div_logo_footer p {
+    text-align: center;
+    font-size: 10px;
+}
+
+.btnRedSocial {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.btnTarjetas {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+/* clase para <div> dentro del footer*/
+.pie {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.pie a {
+    text-decoration: none;
+    color: #3F51B5;
+}
+
+.listasFooter {
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.mediosDePago {
+    padding-top: 1rem;
+}
+
+
+/*main*/
+.contenedorArticulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.articulo {
+    text-align: center;
+    border: 2px solid #E0E0E0;
+    padding: 10px;
+}
+
+.articulo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.articulo p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #3F51B5;
+}
+
+/* style para el gif de mantenimiento*/
+.contenedorMantenimiento {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.mantenimientoGif {
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.contenedorMantenimiento p {
+    font-family: "Ubuntu", serif;
+    font-size: 3rem;
+    font-style: italic;
+    text-align: center;
+    color: #3F51B5;
+    text-shadow: 2px 2px 4px grey;
+}

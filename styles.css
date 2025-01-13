@@ -25,24 +25,170 @@ h3 {
     text-shadow: 2px 2px 4px gray;
 }
 
-/* padding funciona : arriba derecha abajo izquierda.. 1px 4 lados - 1px 1px arab deriz - 1px 1px 1px arr deriz aba*/
-
+/*header*/
 .header {
     display: flex;
     justify-content: space-between;
-    /*recordatorio space between hace que se acomoden primero izq y desp derecha lso btn de ui*/
     align-items: center;
     background-color: #FFF8E1;
     padding: 10px 20px;
     border-bottom: 3px solid #E0E0E0;
+    flex-wrap: wrap;
+    /* Permite que los elementos se acomoden en pantallas pequeñas */
 }
 
+.header .logoIndex {
+    display: flex;
+    height: 100px;
+    width: auto;
+}
+
+.header .accionesUI {
+    display: flex;
+    gap: 15px;
+}
+
+.header .accionesUI .btn {
+    padding: 10px 1px;
+}
+
+.header .accionesUI .btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.input.buscador {
+    display: flex;
+    border: 2px solid #3F51B5;
+    border-radius: 5px;
+    background: url(./Assets/busqueda.png) no-repeat left 5px center;
+    background-size: 15px;
+    padding: 5px 5px 5px 30px;
+    font-size: 14px;
+    background-color: white;
+    color: #3F51B5;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    /* Asegura que ocupe todo el ancho disponible */
+    max-width: 350px;
+}
+
+.input.buscador:focus {
+    border-color: #3F51B5;
+    outline: none;
+}
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .accionesUI {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .header .buscador {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header .logoAdaptableHeader {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header .logoIndex {
+        height: 90%;
+    }
+}
+@media (max-width:250px) {
+
+    .header .accionesUI {
+        justify-content: center;
+        width: 90%;
+    }
+}
+/*footer*/
 .footer {
     display: flex;
     justify-content: space-between;
     background-color: #FFF8E1;
     padding: 20px 40px;
     border-top: 2px solid #E0E0E0;
+    flex-wrap: wrap;
+    /* Permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+.footer .pie {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer .listasFooter {
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.footer .listasFooter li a {
+    text-decoration: none;
+    color: #3F51B5;
+    display: block;
+    padding: 5px 0;
+}
+
+.footer .mediosDePago {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.footer .mediosDePago img {
+    width: 40px;
+    height: auto;
+}
+
+.footer .btnRedSocial {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer .btnRedSocial img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 550px) {
+    .footer {
+        padding: 10px 20px;
+    }
+
+    .footer .pie {
+        margin-bottom: 10px;
+    }
+
+    .footer .mediosDePago {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .btnRedSocial {
+        margin: 10px 0;
+    }
+
+    .footer .listasFooter {
+        text-align: center;
+    }
+
+    .footer .div_logo_footer {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
 .favicon {
@@ -50,33 +196,20 @@ h3 {
     width: 32px;
 }
 
-.logoIndex {
-    display: flex;
-    height: 100px;
-    width: auto;
-}
-
-.logoFooter {
-  
-    height: 100px;
-    width: auto;
-}
-
 /* menu de opciones*/
 .menu {
     display: flex;
     width: 100%;
     gap: 0;
-    /*gap 0 para usar flex-grow en cada etiqueta <a> y que ocupen todo el espacio*/
 }
 
 .menu a {
+    box-sizing: border-box;
     text-decoration: none;
     text-align: center;
     color: #3F51B5;
     background-color: #FFF8E1;
     border-color: #E0E0E0;
-    padding: 5px 10px;
     border-style: solid;
     transition: background-color 0.3s, color 0.3s;
     flex-grow: 1;
@@ -93,98 +226,6 @@ h3 {
     color: white;
     border-color: #3F51B5;
 }
-
-/*div header para UI*/
-.accionesUI {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    background-color: white;
-    border: 2px solid #3F51B5;
-    border-radius: 5px;
-    padding: 5px 15px;
-    color: #3F51B5;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    box-sizing: border-box;
-}
-
-.btn:hover {
-    background-color: #3F51B5;
-    color: white;
-}
-
-.btnCarrito {
-    width: 20px;
-    height: 20px;
-}
-
-input.buscador {
-    display: flex;
-    border: 2px solid #3F51B5;
-    border-radius: 5px;
-    background: url(./Assets/busqueda.png) no-repeat left 5px center;
-    background-size: 15px;
-    padding: 5px 5px 5px 30px;
-    font-size: 14px;
-    background-color: white;
-    color: #3F51B5;
-    box-sizing: border-box;
-    height: auto;
-    width: 150%;
-}
-
-input.buscador:focus {
-    border-color: #3F51B5;
-    outline: none;
-}
-
-.div_logo_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.div_logo_footer p {
-    text-align: center;
-    font-size: 10px;
-}
-
-.btnRedSocial {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-}
-
-.btnTarjetas {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-}
-
-/* clase para <div> dentro del footer*/
-.pie {
-    text-align: center;
-    line-height: 1.5;
-}
-
-.pie a {
-    text-decoration: none;
-    color: #3F51B5;
-}
-
-.listasFooter {
-    list-style: none;
-    padding-top: 1rem;
-}
-
-.mediosDePago {
-    padding-top: 1rem;
-}
-
 
 /*main*/
 .contenedorArticulos {
@@ -232,4 +273,53 @@ input.buscador:focus {
     text-align: center;
     color: #3F51B5;
     text-shadow: 2px 2px 4px grey;
+}
+
+/*menu hamburguesa*/
+@media (max-width: 550px) {
+    .navbar-expand-custom .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-expand-custom .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-expand-custom .collapse.show {
+        display: block;
+    }
+}
+
+/*restaura*/
+@media (min-width: 551px) {
+    .navbar-expand-custom .navbar-collapse {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;
+        width: 100%; 
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between; 
+        width: 100%; 
+        
+    }
+
+    .menu .nav-item {
+        flex-grow: 1;
+        text-align: center; 
+        border: 1px solid #293577; 
+    }
+
+    .menu .nav-link {
+        padding: 10px 15px;
+    }
+
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
 }

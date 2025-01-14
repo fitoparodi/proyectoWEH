@@ -25,104 +25,38 @@ h3 {
     text-shadow: 2px 2px 4px gray;
 }
 
-/* padding funciona : arriba derecha abajo izquierda.. 1px 4 lados - 1px 1px arab deriz - 1px 1px 1px arr deriz aba*/
-
+/*header*/
 .header {
     display: flex;
     justify-content: space-between;
-    /*recordatorio space between hace que se acomoden primero izq y desp derecha lso btn de ui*/
     align-items: center;
     background-color: #FFF8E1;
     padding: 10px 20px;
     border-bottom: 3px solid #E0E0E0;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #FFF8E1;
-    padding: 20px 40px;
-    border-top: 2px solid #E0E0E0;
-}
-
-.favicon {
-    height: 32px;
-    width: 32px;
-}
-
-.logoIndex {
+.header .logoIndex {
     display: flex;
     height: 100px;
     width: auto;
 }
 
-.logoFooter {
-  
-    height: 100px;
-    width: auto;
-}
-
-/* menu de opciones*/
-.menu {
-    display: flex;
-    width: 100%;
-    gap: 0;
-    /*gap 0 para usar flex-grow en cada etiqueta <a> y que ocupen todo el espacio*/
-}
-
-.menu a {
-    text-decoration: none;
-    text-align: center;
-    color: #3F51B5;
-    background-color: #FFF8E1;
-    border-color: #E0E0E0;
-    padding: 5px 10px;
-    border-style: solid;
-    transition: background-color 0.3s, color 0.3s;
-    flex-grow: 1;
-}
-
-/* mostrar pagina seleccionada y activa"*/
-.menu a.activo {
-    background-color: #E0E0E0;
-}
-
-/*mouse over etiquitas <a>*/
-.menu a:hover {
-    background-color: #3F51B5;
-    color: white;
-    border-color: #3F51B5;
-}
-
-/*div header para UI*/
-.accionesUI {
+.header .accionesUI {
     display: flex;
     gap: 15px;
 }
 
-.btn {
-    background-color: white;
-    border: 2px solid #3F51B5;
-    border-radius: 5px;
-    padding: 5px 15px;
-    color: #3F51B5;
+.header .accionesUI .btn {
+    padding: 10px 1px;
     font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    box-sizing: border-box;
 }
 
-.btn:hover {
-    background-color: #3F51B5;
-    color: white;
+.header .accionesUI .btn img {
+    width: 24px;
+    height: 24px;
 }
 
-.btnCarrito {
-    width: 20px;
-    height: 20px;
-}
-
-input.buscador {
+.header .buscador {
     display: flex;
     border: 2px solid #3F51B5;
     border-radius: 5px;
@@ -134,102 +68,336 @@ input.buscador {
     color: #3F51B5;
     box-sizing: border-box;
     height: auto;
-    width: 150%;
+    width: 100%;
+    max-width: 350px;
 }
 
-input.buscador:focus {
+.header .buscador:focus {
     border-color: #3F51B5;
     outline: none;
 }
 
-.div_logo_footer {
+/*footer*/
+.footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    background-color: #FFF8E1;
+    padding: 20px 40px;
+    border-top: 2px solid #E0E0E0;
+    flex-wrap: nowrap;
 }
+    .div_logo_footer{
+        display: flex;
+    }
 
-.div_logo_footer p {
-    text-align: center;
-    font-size: 10px;
-}
+    .footer .pie {
+        text-align: center;
+        line-height: 1.5;
+        flex: 1;
+    }
 
-.btnRedSocial {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-}
+    .footer .listasFooter {
+        list-style: none;
+        padding-top: 1rem;
+    }
 
-.btnTarjetas {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-}
+    .footer .listasFooter li a {
+        text-decoration: none;
+        color: #3F51B5;
+        display: block;
+        padding: 5px 0;
+    }
 
-/* clase para <div> dentro del footer*/
-.pie {
-    text-align: center;
-    line-height: 1.5;
-}
+    .footer .redesSociales {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
 
-.pie a {
-    text-decoration: none;
-    color: #3F51B5;
-}
+    .footer .mediosDePago img {
+        width: 40px;
+        height: auto;
+    }
 
-.listasFooter {
-    list-style: none;
-    padding-top: 1rem;
-}
+    .footer .btnRedSocial {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
 
-.mediosDePago {
-    padding-top: 1rem;
-}
+    .footer .btnRedSocial img {
+        width: 100%;
+        height: 100%;
+    }
 
+    .favicon {
+        height: 32px;
+        width: 32px;
+    }
 
-/*main*/
-.contenedorArticulos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+    /* menu de opciones*/
+    .menu {
+        display: flex;
+        width: 100%;
+        gap: 0;
+    }
 
-.articulo {
-    text-align: center;
-    border: 2px solid #E0E0E0;
-    padding: 10px;
-}
+    .menu a {
+        box-sizing: border-box;
+        text-decoration: none;
+        text-align: center;
+        color: #3F51B5;
+        background-color: #FFF8E1;
+        border-color: #E0E0E0;
+        border-style: solid;
+        transition: background-color 0.3s, color 0.3s;
+        flex-grow: 1;
+    }
 
-.articulo img {
-    max-width: 100%;
-    height: auto;
-}
+    /* mostrar pagina seleccionada y activa*/
+    .menu a.activo {
+        background-color: #E0E0E0;
+    }
 
-.articulo p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #3F51B5;
-}
+    /*mouse over etiquitas <a>*/
+    .menu a:hover {
+        background-color: #3F51B5;
+        color: white;
+        border-color: #3F51B5;
+    }
 
-/* style para el gif de mantenimiento*/
-.contenedorMantenimiento {
-    display: grid;
-    place-items: center;
-    height: 100%;
-}
+    /*main*/
+    .contenedorArticulos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 
-.mantenimientoGif {
-    display: grid;
-    place-items: center;
-    width: 200px;
-    height: 200px;
-}
+    .articulo {
+        text-align: center;
+        border: 2px solid #E0E0E0;
+        padding: 10px;
+    }
 
-.contenedorMantenimiento p {
-    font-family: "Ubuntu", serif;
-    font-size: 3rem;
-    font-style: italic;
-    text-align: center;
-    color: #3F51B5;
-    text-shadow: 2px 2px 4px grey;
-}
+    .articulo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .articulo p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #3F51B5;
+    }
+
+    /* style para el gif de mantenimiento*/
+    .contenedorMantenimiento {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+
+    .mantenimientoGif {
+        display: grid;
+        place-items: center;
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenedorMantenimiento p {
+        font-family: "Ubuntu", serif;
+        font-size: 3rem;
+        font-style: italic;
+        text-align: center;
+        color: #3F51B5;
+        text-shadow: 2px 2px 4px grey;
+    }
+
+    @media (max-width: 750px) {
+
+        /*MEDIA HEADER*/
+        .header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header .accionesUI {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .header .buscador {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .header .logoAdaptableHeader {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header .logoIndex {
+            height: 90%;
+        }
+
+        /*MEDIA FOOTER*/
+        .footer {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .pie .listasFooter {
+            padding-left: 0px;
+            padding-top: 2px;
+        }
+
+        .footer .pie .listasFooter .mediosDePago {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer .pie .redesSociales {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer .div_logo_footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .div_logo_footer .logoFooter {
+            width: 90%;
+        }
+
+        .footer .div_logo_footer p {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 551px) {
+
+        /*restaura menu*/
+        .navbar-expand-custom .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar-expand-custom .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        .menu .nav-item {
+            flex-grow: 1;
+            text-align: center;
+            border: 1px solid #293577;
+        }
+
+        .menu .nav-link {
+            padding: 10px 15px;
+        }
+
+        .navbar-expand-custom .navbar-toggler {
+            display: none;
+        }
+    }
+
+    @media (max-width: 550px) {
+
+        /*menu hamburguesa*/
+        .navbar-expand-custom .navbar-collapse {
+            display: none;
+        }
+
+        .navbar-expand-custom .navbar-toggler {
+            display: block;
+        }
+
+        .navbar-expand-custom .collapse.show {
+            display: block;
+        }
+    }
+
+    @media (max-width:300px) {
+
+        /*MEDIA HEADER*/
+        .header .accionesUI {
+            justify-content: center;
+            width: 90%;
+        }
+
+        .header .logoAdaptableHeader .buscador {
+            background-size: 10px;
+            font-size: 10px;
+        }
+
+        /*MEDIA FOOTER*/
+        .footer {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .pie .listasFooter {
+            padding-left: 0px;
+            padding-top: 2px;
+        }
+
+        .footer .pie .listasFooter .mediosDePago {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer .pie .redesSociales {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .div_logo_footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .div_logo_footer .logoFooter {
+            width: 90%;
+        }
+
+        .footer .div_logo_footer p {
+            font-size: 10px;
+        }
+    }
+
+    @media (min-width: 750px) {
+        /*columnas para maxima pantalla*/
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 1px; 
+            flex-wrap: nowrap;
+        }
+    
+        .footer .pie {
+            text-align: center; 
+            padding: 10px;
+        }
+    }
+    

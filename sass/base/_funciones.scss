@@ -8,6 +8,6 @@
     }
 
     @else {
-        @error "breakpoint #{$breakpoin} no existe en la grid-breakpoints";
+        @error "breakpoint #{$breakpoint} no existe en la grid-breakpoints";
     }
 }

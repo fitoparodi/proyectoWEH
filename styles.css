@@ -11859,6 +11859,44 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.boton, .header .accionesUI .botonUI {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3F51B5;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #293577;
+  padding: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: bacground-color 0.3s, color 0.3s;
+  width: 75px;
+  height: 40px;
+}
+.boton:hover, .header .accionesUI .botonUI:hover {
+  background-color: #3F51B5;
+  transform: translateY(-2px);
+  color: white;
+}
+.boton:active, .header .accionesUI .botonUI:active {
+  transform: translateY(0);
+}
+.boton.pequeño, .header .accionesUI .pequeño.botonUI {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+.boton.iconoTexto, .header .accionesUI .iconoTexto.botonUI {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.boton.soloIcono, .header .accionesUI .soloIcono.botonUI {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
 body {
   font-family: "PT Serif", serif;
   text-shadow: 2px 2px 4px gray;
@@ -11880,6 +11918,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  background-color: #E0E0E0;
 }
 .header .barraBusqueda {
   display: flex;
@@ -11943,6 +11982,11 @@ a {
     /*header en columnas*/
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    max-height: 150px;
+  }
+  .header .logoHeader {
+    padding: 1rem 0;
   }
   .header .logoHeader img {
     width: 100%;
@@ -11956,6 +12000,11 @@ a {
     /*header en columnas*/
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    max-height: 150px;
+  }
+  .header .logoHeader {
+    padding: 1rem 0;
   }
   .header .logoHeader img {
     width: 100%;
@@ -11969,6 +12018,8 @@ a {
     /*header en columnas*/
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    max-height: 150px;
   }
 }
 .header .barraBusqueda .buscador {
@@ -11979,10 +12030,30 @@ a {
     /*header en columnas*/
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    max-height: 150px;
   }
 }
 .header .barraBusqueda .buscador {
   font-size: 14px;
+}
+.header .accionesUI {
+  display: flex;
+  gap: 0.5rem;
+}
+.header .accionesUI .botonUI.miCuenta {
+  background-color: transparent;
+}
+.header .accionesUI .botonUI.carrito {
+  background-color: transparent;
+}
+.header .accionesUI .botonUI.ubicacion {
+  background-color: transparent;
+}
+.header .accionesUI .icono {
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
 }
 
 /*# sourceMappingURL=styles.css.map */

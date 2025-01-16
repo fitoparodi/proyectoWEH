@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    background-color: $colorTerciario;
 
 
     .barraBusqueda {
@@ -47,50 +48,90 @@
             @else {
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
+                max-height: 150px;
             }
 
 
             .logoHeader {
 
-                    @if $breakpoint=='xs' {
-                        max-width: 250px;
-                        min-height: 100px;
-                        img{
+                @if $breakpoint=='xs' {
+                    max-width: 250px;
+                    min-height: 100px;
+
+                    img {
                         width: 250px;
-                        }
-                    }
-
-                    @if $breakpoint=='sm' {
-                        max-width: 300px;
-                        min-height: 150px;
-                        img{
-                        width: 300px;
-                        }
-                    }
-
-                    @else if $breakpoint=='md' {
-                        img {width: 100%;}
-                    }
-
-                    @else if $breakpoint=='lg' {
-                        img {width: 100%;}
                     }
                 }
 
+                @if $breakpoint=='sm' {
+                    max-width: 300px;
+                    min-height: 150px;
+
+                    img {
+                        width: 300px;
+                    }
+                }
+
+                @else if $breakpoint=='md' {
+                    padding: 1rem 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                @else if $breakpoint=='lg' {
+                    padding: 1rem 0;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
             }
 
-            .barraBusqueda .buscador {
-                @if $breakpoint=='xs' {
-                    font-size: 12px;
-                }
+        }
 
-                @else if $breakpoint=='sm' {
-                    font-size: 12px;
-                }
+        .barraBusqueda .buscador {
+            @if $breakpoint=='xs' {
+                font-size: 12px;
+            }
 
-                @else {
-                    font-size: $text-size-default;
-                }
+            @else if $breakpoint=='sm' {
+                font-size: 12px;
+            }
+
+            @else {
+                font-size: $text-size-default;
             }
         }
     }
+
+    .accionesUI{
+        display: flex;
+        gap: 0.5rem;
+    
+        .botonUI{
+            @extend .boton;
+
+            &.miCuenta{
+                background-color: transparent;
+            }
+            &.carrito{
+                background-color: transparent;
+            }
+            &.ubicacion{
+                background-color: transparent;
+            }
+
+        }
+
+        .icono{
+            width: 24px;
+            height: 24px;
+            margin-right: 2px;
+        }
+
+    }
+
+}

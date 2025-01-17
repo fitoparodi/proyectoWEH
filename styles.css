@@ -12056,4 +12056,47 @@ a {
   margin-right: 2px;
 }
 
+.navbar {
+  background-color: #E0E0E0;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml; charset=utf8, %3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba%280, 0, 999, 0.5%27 stroke-width%3D%272%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E");
+}
+.navbar .menu .nav-link {
+  color: #3F51B5;
+  padding: 0.5rem 1rem;
+}
+.navbar .menu .nav-link:hover {
+  background-color: #d0d0d0;
+  color: #293577;
+}
+.navbar .menu .activo {
+  font-weight: bold;
+  color: #293577;
+}
+
+@media (min-width: 768px) {
+  .navbar .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar .menu .nav-item {
+    margin-right: 1rem;
+  }
+  .navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+  .navbar .navbar-toggler {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

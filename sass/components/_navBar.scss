@@ -1,0 +1,54 @@
+$navbar-bg-color: $colorTerciario;
+$navbar-text-color: $colorVectores;
+$navbar-hover-bg: #d0d0d0;
+$navbar-hover-color: $colorPrincipal;
+
+.navbar {
+    background-color: $navbar-bg-color;
+
+    .navbar-toggler {
+        border: none;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml; charset=utf8, %3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba%280, 0, 999, 0.5%27 stroke-width%3D%272%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');
+    }
+
+    .menu {
+        .nav-link {
+            color: $navbar-text-color;
+            padding: 0.5rem 1rem;
+            &:hover {
+                background-color: $navbar-hover-bg;
+                color: $navbar-hover-color;
+            }
+        }
+        .activo {
+            font-weight: bold;
+            color: $navbar-hover-color;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        .menu {
+            display: flex;
+            flex-direction: row;
+            .nav-item {
+                margin-right: 1rem;
+            }
+        }
+        .navbar-collapse {
+            display: flex !important;
+            justify-content: center;
+        }
+        .navbar-toggler{
+            display: none;
+        }
+    }
+}

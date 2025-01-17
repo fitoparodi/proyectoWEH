@@ -34,8 +34,6 @@
         min-height: 150px;
     }
 
-
-
     @each $breakpoint, $value in $grid-breakpoints {
         @include adaptable($breakpoint) {
 

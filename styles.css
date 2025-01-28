@@ -12149,31 +12149,34 @@ a {
     display: none;
   }
 }
-#carrouselHome {
+#carouselHome {
   margin: 15px;
   max-height: 500px;
   overflow: hidden;
 }
-#carrouselHome .carousel-inner {
-  height: 100%;
-}
-#carrouselHome .carousel-item.active {
-  display: block;
-}
-#carrouselHome .carousel-item {
-  height: 100%;
+#carouselHome .carousel-inner .carrouselHomeItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.6s ease-in-out;
+  height: 150px;
+  padding: 10px;
 }
-#carrouselHome img {
-  height: 100%;
+@media (min-width: 768px) {
+  #carouselHome .carousel-inner .carrouselHomeItem {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  #carouselHome .carousel-inner .carrouselHomeItem {
+    height: 400px;
+  }
+}
+#carouselHome .carousel-inner img {
   max-height: 500px;
-  width: auto;
+  max-width: 100%;
   object-fit: contain;
 }
-#carrouselHome .carousel-caption {
+#carouselHome .carousel-caption {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -12184,29 +12187,27 @@ a {
   border: solid 1px white;
   font-size: 1rem;
   color: white;
+  max-width: 90%;
 }
-#carrouselHome .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+@media (max-width: 576px) {
+  #carouselHome .carousel-caption {
+    display: block !important;
+    width: 90%;
+    font-size: 0.6rem;
+  }
+  #carouselHome .carousel-caption h5, #carouselHome .carousel-caption .h5 {
+    font-size: 0.8rem;
+  }
 }
-#carrouselHome .carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  background-color: blue;
-  border-radius: 50%;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-#carrouselHome .carousel-indicators button.active {
-  background-color: #007bff;
-}
-#carrouselHome .carousel-indicators button:hover {
-  background-color: #0056b3;
+@media (max-width: 850px) {
+  #carouselHome .carousel-caption {
+    display: block !important;
+    font-size: 0.8rem;
+    width: 80%;
+  }
+  #carouselHome .carousel-caption h5, #carouselHome .carousel-caption .h5 {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

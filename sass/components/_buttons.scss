@@ -1,0 +1,43 @@
+.boton {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid $colorVectores; 
+    border-radius: 0.5rem;
+    background-color: white;
+    color: $colorPrincipal;
+    padding:2px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: bacground-color 0.3s, color 0.3s;
+    width: 75px;
+    height: 40px;
+  
+    &:hover {
+      background-color: $colorVectores;
+      transform: translateY(-2px);
+      color: white;
+    }
+  
+    &:active {
+      transform: translateY(0);
+    }
+  
+    &.pequeño {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+    &.iconoTexto {
+      flex-direction: column; 
+      gap: 0.25rem;
+    }
+  
+    &.soloIcono {
+      width: 40px;
+      height: 40px;
+      padding: 0; 
+    }
+  }
+  

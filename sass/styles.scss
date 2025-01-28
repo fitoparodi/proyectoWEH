@@ -1,0 +1,15 @@
+@import "base/reset";
+@import "base/fuentes";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "base/variables";
+@import "base/funciones";
+@import "components/buttons";
+@import "base/parametrosTexto";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+@import "components/cards";
+@import "components/navBar";
+@import "pages/carrouselHome";

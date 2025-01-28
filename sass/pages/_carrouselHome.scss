@@ -1,27 +1,32 @@
-#carrouselHome {
+#carouselHome {
     margin: 15px;
     max-height: 500px;
     overflow: hidden;
 
     .carousel-inner {
-        height: 100%;
-    }
-    .carousel-item.active{
-        display: block;
-    }
-    .carousel-item {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.6s ease-in-out;
-    }
 
-    img {
-        height: 100%;
-        max-height: 500px;
-        width: auto;
-        object-fit: contain;
+        .carrouselHomeItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px; // Altura inicial para pantallas pequeñas
+            padding: 10px;
+
+            @include adaptable(md) {
+                height: 250px; // Ajusta altura en pantallas medianas
+            }
+
+            @include adaptable(lg) {
+                height: 400px; // Ajusta altura en pantallas grandes
+            }
+        }
+
+        img {
+            max-height: 500px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
     }
 
     .carousel-caption {
@@ -35,32 +40,27 @@
         border: solid 1px white;
         font-size: 1rem;
         color: white;
-    }
+        max-width: 90%;
 
-    .carousel-indicators {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        gap: 10px;
 
-        button {
-            width: 10px;
-            height: 10px;
-            background-color: blue; 
-            border-radius: 50%;
-            border: none;
-            transition: background-color 0.3s ease;
-
-            &.active {
-                background-color: #007bff; 
-            }
-
-            &:hover {
-                background-color: #0056b3;
-            }
+    @media(max-width: 576px) { 
+        display: block !important;
+        width: 90%;
+        font-size: 0.6rem; 
+          h5{
+            font-size: 0.8rem;
         }
     }
+    
+    @media (max-width: 850px){
+        display: block !important;
+        font-size: 0.8rem;
+        width: 80%;
+
+        h5{
+            font-size: 1rem;
+        }
+    }
+
+}
 }

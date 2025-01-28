@@ -12056,6 +12056,57 @@ a {
   margin-right: 2px;
 }
 
+.contenedor_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width: 1200px) {
+  .contenedor_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .contenedor_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .contenedor_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+.card .card-img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+.card .card-body {
+  padding: 15px;
+  flex-grow: 1;
+}
+.card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #293577;
+  text-shadow: 2px;
+}
+.card .card-text {
+  font-size: 1rem;
+  color: #3F51B5;
+  text-align: center;
+}
+
 .navbar {
   background-color: #E0E0E0;
 }
@@ -12100,78 +12151,62 @@ a {
 }
 #carrouselHome {
   margin: 15px;
+  max-height: 500px;
+  overflow: hidden;
 }
-#carrouselHome .carrouselHomeItem {
+#carrouselHome .carousel-inner {
+  height: 100%;
+}
+#carrouselHome .carousel-item.active {
+  display: block;
+}
+#carrouselHome .carousel-item {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  background-color: #f8f9fa;
-  padding: 10px;
+  transition: transform 0.6s ease-in-out;
 }
-@media (min-width: 768px) {
-  #carrouselHome .carrouselHomeItem {
-    height: 250px;
-  }
-}
-@media (min-width: 992px) {
-  #carrouselHome .carrouselHomeItem {
-    height: 400px;
-  }
-}
-#carrouselHome .carrouselHomeImage {
-  max-height: 100%;
-  max-width: 100%;
+#carrouselHome img {
+  height: 100%;
+  max-height: 500px;
+  width: auto;
   object-fit: contain;
 }
-@media (min-width: 768px) {
-  #carrouselHome .carrouselHomeImage {
-    margin: 10px;
-  }
-}
-@media (min-width: 992px) {
-  #carrouselHome .carrouselHomeImage {
-    margin: 20px;
-  }
-}
-#carrouselHome .carrouselHomeCaption {
+#carrouselHome .carousel-caption {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background-color: rgba(0, 0, 100, 0.8);
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  border: solid 1px white;
+  font-size: 1rem;
+  color: white;
 }
-@media (min-width: 768px) {
-  #carrouselHome .carrouselHomeCaption {
-    font-size: 1rem;
-  }
+#carrouselHome .carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-@media (min-width: 992px) {
-  #carrouselHome .carrouselHomeCaption {
-    font-size: 1.2rem;
-  }
-}
-#carrouselHome .carousel-control-prev-icon,
-#carrouselHome .carousel-control-next-icon {
-  background-color: #000;
+#carrouselHome .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
   border-radius: 50%;
-  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
 }
-@media (min-width: 768px) {
-  #carrouselHome .carousel-control-prev-icon,
-  #carrouselHome .carousel-control-next-icon {
-    padding: 15px;
-  }
+#carrouselHome .carousel-indicators button.active {
+  background-color: #007bff;
 }
-@media (min-width: 992px) {
-  #carrouselHome .carousel-control-prev-icon,
-  #carrouselHome .carousel-control-next-icon {
-    padding: 20px;
-  }
+#carrouselHome .carousel-indicators button:hover {
+  background-color: #0056b3;
 }
 
 /*# sourceMappingURL=styles.css.map */

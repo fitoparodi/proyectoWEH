@@ -1,73 +1,66 @@
 #carrouselHome {
-
     margin: 15px;
+    max-height: 500px;
+    overflow: hidden;
 
-    .carrouselHomeItem {
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-item.active{
+        display: block;
+    }
+    .carousel-item {
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 150px; // Altura inicial
-        background-color: #f8f9fa; // Fondo opcional
-        padding: 10px;
-
-        @include adaptable(md) {
-            height: 250px; // Ajustar altura en pantallas medianas
-        }
-
-        @include adaptable(lg) {
-            height: 400px; // Ajustar altura en pantallas grandes
-        }
+        transition: transform 0.6s ease-in-out;
     }
 
-    // Estilo para las imágenes
-    .carrouselHomeImage {
-        max-height: 100%; // Ajusta la altura de la imagen al contenedor
-        max-width: 100%; // Mantén la imagen dentro del contenedor
-        object-fit: contain; // Ajusta la imagen para que no se deforme
-
-        @include adaptable(md) {
-            margin: 10px; // Espaciado adicional en pantallas medianas
-        }
-
-        @include adaptable(lg) {
-            margin: 20px; // Espaciado adicional en pantallas grandes
-        }
+    img {
+        height: 100%;
+        max-height: 500px;
+        width: auto;
+        object-fit: contain;
     }
 
-    // Estilo para las leyendas del carrusel
-    .carrouselHomeCaption {
+    .carousel-caption {
         position: absolute;
-        bottom: 20px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: rgba(0, 0, 0, 0.6); // Fondo semitransparente
-        color: #fff;
+        background-color: rgba(0, 0, 100, 0.8); 
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: 0.9rem;
-
-        @include adaptable(md) {
-            font-size: 1rem; // Ajusta el tamaño de texto en pantallas medianas
-        }
-
-        @include adaptable(lg) {
-            font-size: 1.2rem; // Ajusta el tamaño de texto en pantallas grandes
-        }
+        border: solid 1px white;
+        font-size: 1rem;
+        color: white;
     }
 
-    // Estilo para los controles del carrusel
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: #000; // Fondo negro para los íconos
-        border-radius: 50%; // Íconos redondeados
-        padding: 10px;
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
 
-        @include adaptable(md) {
-            padding: 15px; // Ajustar tamaño en pantallas medianas
-        }
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: blue; 
+            border-radius: 50%;
+            border: none;
+            transition: background-color 0.3s ease;
 
-        @include adaptable(lg) {
-            padding: 20px; // Ajustar tamaño en pantallas grandes
+            &.active {
+                background-color: #007bff; 
+            }
+
+            &:hover {
+                background-color: #0056b3;
+            }
         }
     }
 }

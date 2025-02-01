@@ -12056,6 +12056,113 @@ a {
   margin-right: 2px;
 }
 
+.footer {
+  background-color: #E0E0E0;
+  color: #293577;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer nav {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer nav .pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer nav .pie h3, .footer nav .pie .h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.footer nav .pie .listasFooter {
+  list-style: none;
+  padding: 0;
+}
+.footer nav .pie .listasFooter li {
+  margin-bottom: 5px;
+}
+.footer nav .pie .listasFooter li a {
+  text-decoration: none;
+  color: #3F51B5;
+  transition: color 0.3s ease;
+}
+.footer nav .pie .listasFooter li a:hover {
+  color: black;
+}
+.footer nav .pie .mediosDePago {
+  margin-top: 10px;
+}
+.footer nav .pie .mediosDePago .btnTarjetas {
+  width: 40px;
+  margin: 1px;
+}
+.footer nav .pie .redesSociales {
+  margin-top: 10px;
+}
+.footer nav .pie .redesSociales .btnRedSocial {
+  width: 40px;
+  margin: 0 5px;
+}
+.footer .div_logo_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 75%;
+  height: 100%;
+}
+.footer .div_logo_footer .logoFooter {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.footer .div_logo_footer p {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: stretch;
+  }
+  .footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer nav .pie {
+    align-items: start;
+  }
+  .footer .div_logo_footer {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 40px;
+  }
+  .footer .pie h3, .footer .pie .h3 {
+    font-size: 1.4rem;
+  }
+  .footer .pie .listasFooter li {
+    font-size: 1rem;
+  }
+  .footer .pie .btnTarjetas {
+    width: 50px;
+  }
+  .footer .pie .btnRedSocial {
+    width: 50px;
+  }
+}
+
 .contenedor_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1,0 +1,130 @@
+.footer {
+    background-color: $colorTerciario;
+    color: $colorPrincipal;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    nav {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .pie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+
+            .listasFooter {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 5px;
+
+                    a {
+                        text-decoration: none;
+                        color: $colorVectores;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .mediosDePago {
+                margin-top: 10px;
+
+                .btnTarjetas {
+                    width: 40px;
+                    margin: 1px;
+                }
+            }
+
+            .redesSociales {
+                margin-top: 10px;
+
+                .btnRedSocial {
+                    width: 40px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .div_logo_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 75%; 
+        height: 100%;
+    
+        .logoFooter {
+            max-width: 100%; // Se adapta sin salirse
+            height: auto; // Mantiene proporciones
+            object-fit: contain; // Evita deformaciones
+        }
+    
+        p {
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: stretch;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            .pie{
+                align-items: start;
+            }
+        }
+
+        .div_logo_footer {
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+
+    @media (min-width: 1024px) {
+        padding: 40px;
+
+        .pie {
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .listasFooter li {
+                font-size: 1rem;
+            }
+
+            .btnTarjetas {
+                width: 50px;
+            }
+
+            .btnRedSocial {
+                width: 50px;
+            }
+        }
+    }
+}

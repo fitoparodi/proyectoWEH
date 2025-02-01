@@ -11863,7 +11863,7 @@ textarea.form-control-lg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #3F51B5;
+  border: 2px solid white;
   border-radius: 0.5rem;
   background-color: white;
   color: #293577;
@@ -11874,10 +11874,10 @@ textarea.form-control-lg {
   transition: bacground-color 0.3s, color 0.3s;
   width: 75px;
   height: 40px;
+  text-shadow: none;
 }
 .boton:hover, .header .accionesUI .botonUI:hover {
-  background-color: #3F51B5;
-  transform: translateY(-2px);
+  background-color: rgb(88, 106, 204);
   color: white;
 }
 .boton:active, .header .accionesUI .botonUI:active {
@@ -11918,12 +11918,12 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #E0E0E0;
+  background: linear-gradient(180deg, rgb(88, 106, 204) 0%, rgb(200, 200, 255) 100%);
 }
 .header .barraBusqueda {
   display: flex;
   margin: 1rem;
-  border: 2px solid #3F51B5;
+  border: 2px solid white;
   border-radius: 5px;
   background: url(../../Assets/busqueda.png) no-repeat left 5px center;
   background-size: 15px;
@@ -12056,6 +12056,113 @@ a {
   margin-right: 2px;
 }
 
+.footer {
+  background: linear-gradient(360deg, rgb(150, 150, 255) 0%, rgb(220, 220, 255) 100%);
+  color: #293577;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer nav {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer nav .pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer nav .pie h3, .footer nav .pie .h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.footer nav .pie .listasFooter {
+  list-style: none;
+  padding: 0;
+}
+.footer nav .pie .listasFooter li {
+  margin-bottom: 5px;
+}
+.footer nav .pie .listasFooter li a {
+  text-decoration: none;
+  color: #3F51B5;
+  transition: color 0.3s ease;
+}
+.footer nav .pie .listasFooter li a:hover {
+  color: black;
+}
+.footer nav .pie .mediosDePago {
+  margin-top: 10px;
+}
+.footer nav .pie .mediosDePago .btnTarjetas {
+  width: 40px;
+  margin: 1px;
+}
+.footer nav .pie .redesSociales {
+  margin-top: 10px;
+}
+.footer nav .pie .redesSociales .btnRedSocial {
+  width: 40px;
+  margin: 0 5px;
+}
+.footer .div_logo_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 75%;
+  height: 100%;
+}
+.footer .div_logo_footer .logoFooter {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.footer .div_logo_footer p {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: stretch;
+  }
+  .footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer nav .pie {
+    align-items: start;
+  }
+  .footer .div_logo_footer {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 40px;
+  }
+  .footer .pie h3, .footer .pie .h3 {
+    font-size: 1.4rem;
+  }
+  .footer .pie .listasFooter li {
+    font-size: 1rem;
+  }
+  .footer .pie .btnTarjetas {
+    width: 50px;
+  }
+  .footer .pie .btnRedSocial {
+    width: 50px;
+  }
+}
+
 .contenedor_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -12104,11 +12211,12 @@ a {
 .card .card-text {
   font-size: 1rem;
   color: #3F51B5;
+  text-shadow: none;
   text-align: center;
 }
 
 .navbar {
-  background-color: #E0E0E0;
+  background: linear-gradient(180deg, rgb(200, 200, 255) 0%, rgb(200, 200, 255) 55%, rgb(255, 255, 255) 100%);
 }
 .navbar .navbar-toggler {
   border: none;
@@ -12121,15 +12229,20 @@ a {
   background-image: url("data:image/svg+xml; charset=utf8, %3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba%280, 0, 999, 0.5%27 stroke-width%3D%272%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E");
 }
 .navbar .menu .nav-link {
-  color: #3F51B5;
+  font-weight: bold;
+  color: #293577;
+  text-shadow: 2px 2px 2px white, -2px 2px 2px white, 2px -2px 2px white, -2px -2px 2px white;
   padding: 0.5rem 1rem;
+  border: 1px solid transparent;
 }
 .navbar .menu .nav-link:hover {
-  background-color: #d0d0d0;
+  background-color: white;
   color: #293577;
+  border-radius: 5px;
+  border: 1px solid #293577;
 }
 .navbar .menu .activo {
-  font-weight: bold;
+  font-style: italic;
   color: #293577;
 }
 

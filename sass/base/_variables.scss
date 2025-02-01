@@ -5,3 +5,6 @@ $colorVectores: #3F51B5;
 $espaciado-default: 1rem;
 $text-size-default: 14px;
 $transiciones: background-color 0.3s, color 0.3s;
+$gradient: linear-gradient(180deg, rgba(88,106,204,1) 0%, rgba(200,200,255,1) 100%);
+$gradientInv: linear-gradient(360deg, rgba(150,150,255,1) 0%,rgba(220,220,255,1) 100%);
+$gradientMenu: linear-gradient(180deg, rgba(200,200,255,1) 0%, rgba(200,200,255,1) 55%, rgba(255,255,255,1)100%);

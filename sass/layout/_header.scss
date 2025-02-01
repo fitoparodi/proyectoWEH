@@ -3,13 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: $colorTerciario;
+    background: $gradient;
 
 
     .barraBusqueda {
         display: flex;
         margin: 1rem;
-        border: 2px solid $colorVectores;
+        border: 2px solid white;
         border-radius: 5px;
         background: url(../../Assets/busqueda.png) no-repeat left 5px center;
         background-size: 15px;

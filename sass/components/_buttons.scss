@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center; 
     justify-content: center; 
-    border: 2px solid $colorVectores; 
+    border: 2px solid white; 
     border-radius: 0.5rem;
     background-color: white;
     color: $colorPrincipal;
@@ -13,11 +13,11 @@
     transition: bacground-color 0.3s, color 0.3s;
     width: 75px;
     height: 40px;
+    text-shadow: none;
   
     &:hover {
-      background-color: $colorVectores;
-      transform: translateY(-2px);
-      color: white;
+      background-color: rgba(88,106,204);
+       color: white;
     }
   
     &:active {

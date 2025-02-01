@@ -11863,7 +11863,7 @@ textarea.form-control-lg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #3F51B5;
+  border: 2px solid white;
   border-radius: 0.5rem;
   background-color: white;
   color: #293577;
@@ -11874,10 +11874,10 @@ textarea.form-control-lg {
   transition: bacground-color 0.3s, color 0.3s;
   width: 75px;
   height: 40px;
+  text-shadow: none;
 }
 .boton:hover, .header .accionesUI .botonUI:hover {
-  background-color: #3F51B5;
-  transform: translateY(-2px);
+  background-color: rgb(88, 106, 204);
   color: white;
 }
 .boton:active, .header .accionesUI .botonUI:active {
@@ -11918,12 +11918,12 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #E0E0E0;
+  background: linear-gradient(180deg, rgb(88, 106, 204) 0%, rgb(200, 200, 255) 100%);
 }
 .header .barraBusqueda {
   display: flex;
   margin: 1rem;
-  border: 2px solid #3F51B5;
+  border: 2px solid white;
   border-radius: 5px;
   background: url(../../Assets/busqueda.png) no-repeat left 5px center;
   background-size: 15px;
@@ -12057,7 +12057,7 @@ a {
 }
 
 .footer {
-  background-color: #E0E0E0;
+  background: linear-gradient(360deg, rgb(150, 150, 255) 0%, rgb(220, 220, 255) 100%);
   color: #293577;
   padding: 20px;
   text-align: center;
@@ -12211,11 +12211,12 @@ a {
 .card .card-text {
   font-size: 1rem;
   color: #3F51B5;
+  text-shadow: none;
   text-align: center;
 }
 
 .navbar {
-  background-color: #E0E0E0;
+  background: linear-gradient(180deg, rgb(200, 200, 255) 0%, rgb(200, 200, 255) 55%, rgb(255, 255, 255) 100%);
 }
 .navbar .navbar-toggler {
   border: none;
@@ -12228,15 +12229,20 @@ a {
   background-image: url("data:image/svg+xml; charset=utf8, %3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba%280, 0, 999, 0.5%27 stroke-width%3D%272%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E");
 }
 .navbar .menu .nav-link {
-  color: #3F51B5;
+  font-weight: bold;
+  color: #293577;
+  text-shadow: 2px 2px 2px white, -2px 2px 2px white, 2px -2px 2px white, -2px -2px 2px white;
   padding: 0.5rem 1rem;
+  border: 1px solid transparent;
 }
 .navbar .menu .nav-link:hover {
-  background-color: #d0d0d0;
+  background-color: white;
   color: #293577;
+  border-radius: 5px;
+  border: 1px solid #293577;
 }
 .navbar .menu .activo {
-  font-weight: bold;
+  font-style: italic;
   color: #293577;
 }
 

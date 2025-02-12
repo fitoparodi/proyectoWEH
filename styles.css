@@ -12185,6 +12185,10 @@ a {
   }
 }
 
+.main-minH {
+  min-height: 800px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -12321,6 +12325,18 @@ a {
   #carouselHome .carousel-caption h5, #carouselHome .carousel-caption .h5 {
     font-size: 1rem;
   }
+}
+
+#about {
+  padding-bottom: 50px;
+}
+#about h1, #about .h1 {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+#about .video-container {
+  border: 2px solid green;
 }
 
 /*# sourceMappingURL=styles.css.map */

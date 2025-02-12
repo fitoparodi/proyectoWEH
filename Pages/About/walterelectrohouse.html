@@ -48,8 +48,67 @@
     </nav>
 
     <!--productos-->
-    <main>
-        
+    <main id="about" class="container mt-4">
+        <h1>Quiénes Somos</h1>
+        <div class="video-container text-center">
+            <video width="700" height="500" autoplay muted loop>
+                <source src="./../../Assets/quienessomos.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <section id="contacto" class="mt-5">
+            <h2>Contacto</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="asunto" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="consulta" class="form-label">Consulta</label>
+                    <textarea class="form-control" id="consulta" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+        <section id="ventaspormayor" class="mt-5">
+            <h2>Ventas por Mayor</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="asunto-mayor" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="asunto-mayor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre-mayor" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nombre-mayor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono-mayor" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono-mayor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email-mayor" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email-mayor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="consulta-mayor" class="form-label">Consulta</label>
+                    <textarea class="form-control" id="consulta-mayor" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <!-- pie de pagina-->

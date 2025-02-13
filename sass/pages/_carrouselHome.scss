@@ -9,15 +9,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 150px; // Altura inicial para pantallas pequeñas
+            height: 150px; 
             padding: 10px;
 
             @include adaptable(md) {
-                height: 250px; // Ajusta altura en pantallas medianas
+                height: 250px; 
             }
 
             @include adaptable(lg) {
-                height: 400px; // Ajusta altura en pantallas grandes
+                height: 400px; 
             }
         }
 

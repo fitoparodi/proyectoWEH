@@ -48,10 +48,22 @@
     </nav>
 
     <!--productos-->
-    <main class="main-minH">
-        
-    </main>
+    <main id="login" class="main-minH container mt-4">
 
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="email-login" class="form-label">Correo Electrónico</label>
+                <input type="email" name="email" class="form-control" id="email-login" placeholder="Escribe tu correo electrónico" required>
+            </div>
+            <div class="mb-3">
+                <label for="password-login" class="form-label">Contraseña</label>
+                <input type="password" name="password" class="form-control" id="password-login" placeholder="Escribe tu contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Log In</button>
+            <button type="submit" class="btn btn-primary"><a href="registro.html">Registrarse</a></button>
+        </form>
+    </main>
     <!-- pie de pagina-->
     <footer class="footer">
         <nav>

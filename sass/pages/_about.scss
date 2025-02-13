@@ -1,14 +1,69 @@
 #about {
-  padding-bottom: 50px;
-    
+    padding-bottom: 50px;
+
     h1 {
         margin-bottom: 50px;
         display: flex;
         justify-content: center;
     }
 
-    .video-container{
-        border: 2px solid green;
+    .videoContainer {
+        display: flex;
+        justify-content: center;
     }
 
+    .video {
+        max-width: 250px;
+        height: auto;
+        border: 2px solid blueviolet;
+
+        @media(min-width: 350px) {
+            max-width: 300px;
+            height: auto;
+        }
+
+        @include adaptable(sm) {
+            max-width: 400px;
+            height: auto;
+        }
+
+        @include adaptable(md) {
+            max-width: 500px;
+            height: auto;
+        }
+
+        @include adaptable(lg) {
+            max-width: 700px;
+            height: auto;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 50px 15px 0px;
+        flex-direction: column;
+
+    }
+}
+
+
+#contacto {
+    border: 1px solid $colorVectores;
+    border-radius: 5px;
+    padding: 10px;
+
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+
+#ventaspormayor {
+    border: 1px solid $colorVectores;
+    border-radius: 5px;
+    padding: 10px;
+
+    h2 {
+        margin-bottom: 15px;
+    }
 }

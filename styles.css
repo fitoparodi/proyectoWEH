@@ -12335,8 +12335,98 @@ a {
   display: flex;
   justify-content: center;
 }
-#about .video-container {
-  border: 2px solid green;
+#about .videoContainer {
+  display: flex;
+  justify-content: center;
+}
+#about .video {
+  max-width: 250px;
+  height: auto;
+  border: 2px solid blueviolet;
+}
+@media (min-width: 350px) {
+  #about .video {
+    max-width: 300px;
+    height: auto;
+  }
+}
+@media (min-width: 576px) {
+  #about .video {
+    max-width: 400px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  #about .video {
+    max-width: 500px;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+  #about .video {
+    max-width: 700px;
+    height: auto;
+  }
+}
+#about p {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin: 50px 15px 0px;
+  flex-direction: column;
+}
+
+#contacto {
+  border: 1px solid #3F51B5;
+  border-radius: 5px;
+  padding: 10px;
+}
+#contacto h2, #contacto .h2 {
+  margin-bottom: 15px;
+}
+
+#ventaspormayor {
+  border: 1px solid #3F51B5;
+  border-radius: 5px;
+  padding: 10px;
+}
+#ventaspormayor h2, #ventaspormayor .h2 {
+  margin-bottom: 15px;
+}
+
+#login {
+  padding-bottom: 50px;
+}
+#login h1, #login .h1 {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  padding: 10px;
+}
+#loginForm input {
+  min-width: 250px;
+  font-size: 0.8rem;
+}
+@media (min-width: 400px) {
+  #loginForm input {
+    min-width: 380px;
+    font-size: 1rem;
+  }
+}
+#loginForm button {
+  width: 150px;
+  margin: 5px;
+}
+#loginForm a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./../../styles.css">
     <link rel="icon" href="./../../Assets/favicon.webp" type="image/webp" class="favicon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -50,34 +51,42 @@
     <!--productos-->
     <main id="about" class="container mt-4">
         <h1>Quiénes Somos</h1>
-        <div class="video-container text-center">
-            <video width="700" height="500" autoplay muted loop>
-                <source src="./../../Assets/quienessomos.mp4" type="video/mp4">
-            </video>
+        <div class="videoContainer">
+        <video class="video" autoplay muted loop>
+            <source src="./../../Assets/quienessomos.mp4" type="video/mp4">
+        </video>
         </div>
+        <div>
+            <p>
+                Walter Electro House es una empresa dedicada a la venta de productos electrónicos y electrodomésticos.
+                Contamos con una amplia variedad de productos de las mejores marcas del mercado. Nuestro objetivo es
+                brindarle a nuestros clientes la mejor calidad y el mejor precio en cada uno de nuestros productos.
+            </p>
+        </div>
+       
 
         <section id="contacto" class="mt-5">
             <h2>Contacto</h2>
-            <form>
+            <form id="contactForm">
                 <div class="mb-3">
                     <label for="asunto" class="form-label">Asunto</label>
-                    <input type="text" class="form-control" id="asunto" required>
+                    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="Escribe el motivo del contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="nombre" required>
+                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escribe tu nombre y apellido" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="telefono" required>
+                    <input type="tel" name="telefono" class="form-control" id="telefono" placeholder="Escribe un teléfono de contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" required>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Escribe tu correo electrónico" required>
                 </div>
                 <div class="mb-3">
                     <label for="consulta" class="form-label">Consulta</label>
-                    <textarea class="form-control" id="consulta" rows="3" required></textarea>
+                    <textarea class="form-control" name="consulta" id="consulta" rows="3" placeholder="Escribe tu consulta" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -88,29 +97,29 @@
             <form>
                 <div class="mb-3">
                     <label for="asunto-mayor" class="form-label">Asunto</label>
-                    <input type="text" class="form-control" id="asunto-mayor" required>
+                    <input type="text" name="asunto" class="form-control" id="asunto-mayor" placeholder="Escribe el motivo del contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="nombre-mayor" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="nombre-mayor" required>
+                    <input type="text" name="nombre" class="form-control" id="nombre-mayor" placeholder="Escribe tu nombre y apellido" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono-mayor" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="telefono-mayor" required>
+                    <input type="tel" name="telefono" class="form-control" id="telefono-mayor" placeholder="Escribe un teléfono de contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="email-mayor" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email-mayor" required>
+                    <input type="email" name="email" class="form-control" id="email-mayor" placeholder="Escribe tu correo electrónico" required>
                 </div>
                 <div class="mb-3">
                     <label for="consulta-mayor" class="form-label">Consulta</label>
-                    <textarea class="form-control" id="consulta-mayor" rows="3" required></textarea>
+                    <textarea class="form-control" name="consulta" id="consulta-mayor" rows="3" placeholder="Escribe tu consulta" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </section>
     </main>
-
+ 
     <!-- pie de pagina-->
     <footer class="footer">
         <nav>
@@ -164,6 +173,29 @@
             <p>FP® 2024</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("PaoiXuj0YawQk5F9K"); // Inicializa EmailJS
+    
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+    
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+    
+                emailjs.send("service_en8hxiw", "template_93wiqpd", data)
+                    .then(() => {
+                        alert("Correo enviado con éxito");
+                        this.reset();
+                    })
+                    .catch(error => {
+                        console.error("Error al enviar correo:", error);
+                        alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
+                    });
+            });
+        });
+    </script>
 </body>
 
 </html>

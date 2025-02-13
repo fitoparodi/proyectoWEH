@@ -60,7 +60,8 @@
                 <label for="password-login" class="form-label">Contraseña</label>
                 <input type="password" name="password" class="form-control" id="password-login" placeholder="Escribe tu contraseña" required>
             </div>
-            <button type="submit" class="btn btn-primary">Log In</button>
+            <button id="loginBtn" type="button" class="btn btn-primary">Log In</button>
+            <p id="loginMessage" style="display: none; color: red; font-weight: bold; text-align: center;">Próximamente</p>
             <button type="submit" class="btn btn-primary"><a href="registro.html">Registrarse</a></button>
         </form>
     </main>
@@ -117,6 +118,17 @@
             <p>FP® 2024</p>
         </div>
     </footer>
+    <script>
+    document.getElementById("loginBtn").addEventListener("click", function() {
+        let message = document.getElementById("loginMessage");
+        message.style.display = "block";
+    
+        // Opcional: Ocultar el mensaje después de unos segundos
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 3000);
+    });
+    </script>
 </body>
 
 </html>

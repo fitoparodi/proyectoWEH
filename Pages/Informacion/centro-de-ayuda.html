@@ -21,8 +21,10 @@
                 <img src="./../../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./../Carrito/carrito.html">
                 <img src="./../../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -47,10 +49,75 @@
         </div>
     </nav>
 
-    <!--productos-->
-    <main class="main-minH">
-        
+    <main class="main-minH container my-5">
+        <h2 class="text-center mb-4">Centro de Ayuda</h2>
+        <p class="text-center">Encuentra respuestas a las preguntas más frecuentes.</p>
+
+        <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1">
+                        ¿Cuáles son los métodos de pago disponibles?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Aceptamos pagos con tarjetas de crédito, débito y transferencias bancarias.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        ¿Cómo hago seguimiento a mi pedido?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Puedes rastrear tu pedido ingresando a tu cuenta y revisando la sección "Mis Pedidos".
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        ¿Puedo cambiar o cancelar mi pedido?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Sí, puedes cancelar o modificar tu pedido dentro de las primeras 24 horas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        ¿Cómo contacto al servicio de atención al cliente?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Puedes contactarnos a través de nuestro formulario de contacto o por WhatsApp.
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
+
 
     <!-- pie de pagina-->
     <footer class="footer">
@@ -105,6 +172,28 @@
             <p>FP® 2024</p>
         </div>
     </footer>
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
+
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
+        });
+    </script>
 </body>
 
 </html>

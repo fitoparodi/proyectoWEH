@@ -21,8 +21,10 @@
                 <img src="./../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./Carrito/carrito.html">
                 <img src="./../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -51,102 +53,167 @@
     <main class="main-minH">
         <div class="contenedor_cards">
             <div class="card">
-                <img src="./../Assets/celular1.webp" alt="Oferta 1" class="card-img">
+                <img src="./../Assets/celular1.webp" alt="Samsung Galaxy A54" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 1</h5>
-                    <p class="card-text">Esta es la oferta 1</p>
+                    <h5 class="card-title">Samsung Galaxy A54</h5>
+                    <p class="card-text">Pantalla Super AMOLED, 128GB de almacenamiento y cámara de 50MP.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./../Assets/celular2.webp" alt="Oferta 2" class="card-img">
+                <img src="./../Assets/celular2.webp" alt="Xiaomi Redmi Note 12" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 2</h5>
-                    <p class="card-text">Esta es la oferta 2</p>
+                    <h5 class="card-title">Xiaomi Redmi Note 12</h5>
+                    <p class="card-text">Procesador Snapdragon, batería de 5000mAh y carga rápida de 33W.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./../Assets/celular3.webp" alt="Oferta 3" class="card-img">
+                <img src="./../Assets/celular3.webp" alt="iPhone 13 Pro" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 3</h5>
-                    <p class="card-text">Esta es la oferta 3</p>
+                    <h5 class="card-title">iPhone 13 Pro</h5>
+                    <p class="card-text">Pantalla ProMotion de 120Hz y potente chip A15 Bionic.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./../Assets/celular1.webp" alt="Oferta 1" class="card-img">
+                <img src="./../Assets/celular1.webp" alt="Motorola Edge 40" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 1</h5>
-                    <p class="card-text">Esta es la oferta 1</p>
+                    <h5 class="card-title">Motorola Edge 40</h5>
+                    <p class="card-text">Pantalla curva OLED de 144Hz y carga turbo de 68W.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./../Assets/celular2.webp" alt="Oferta 2" class="card-img">
+                <img src="./../Assets/celular2.webp" alt="Realme GT Neo 5" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 2</h5>
-                    <p class="card-text">Esta es la oferta 2</p>
+                    <h5 class="card-title">Realme GT Neo 5</h5>
+                    <p class="card-text">Carga ultra rápida de 240W y cámara de 50MP con OIS.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./../Assets/celular3.webp" alt="Oferta 3" class="card-img">
+                <img src="./../Assets/celular3.webp" alt="Google Pixel 7" class="card-img">
                 <div class="card-body">
-                    <h5 class="card-title">Oferta 3</h5>
-                    <p class="card-text">Esta es la oferta 3</p>
+                    <h5 class="card-title">Google Pixel 7</h5>
+                    <p class="card-text">Experiencia Android pura con la mejor fotografía computacional.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular1.webp" alt="Samsung Galaxy S23" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung Galaxy S23</h5>
+                    <p class="card-text">Potente Snapdragon 8 Gen 2 y pantalla Dynamic AMOLED.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular2.webp" alt="Xiaomi Poco F5" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Xiaomi Poco F5</h5>
+                    <p class="card-text">Rendimiento gaming con refrigeración líquida y 12GB de RAM.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular3.webp" alt="OnePlus Nord 2T" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">OnePlus Nord 2T</h5>
+                    <p class="card-text">Carga rápida de 80W y cámara Sony de 50MP.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular1.webp" alt="Vivo V27 Pro" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Vivo V27 Pro</h5>
+                    <p class="card-text">Cámara con sensor Sony IMX766V y diseño ultradelgado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular2.webp" alt="Huawei P50 Pro" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Huawei P50 Pro</h5>
+                    <p class="card-text">Fotografía Leica y pantalla curva OLED de 120Hz.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/celular3.webp" alt="Nothing Phone 2" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Nothing Phone 2</h5>
+                    <p class="card-text">Diseño transparente con luces LED y Snapdragon 8+ Gen 1.</p>
                 </div>
             </div>
         </div>
+        
     </main>
 
-<!-- pie de pagina-->
-<footer class="footer">
-    <nav>
-        <div class="pie">
-            <h3>CATEGORIAS</h3>
-            <ul class="listasFooter">
-                <li><a href="./../index.html">Inicio</a></li>
-                <li><a href="./televisores.html">Televisores</a></li>
-                <li><a href="./electrodomesticos.html">Electrodomésticos</a></li>
-                <li><a href="./heladeras.html">Heladeras / Freezers</a></li>
-                <li><a href="./varioshogar.html">Varios Hogar</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav>
-        <div class="pie">
-            <h3>INFORMACION</h3>
-            <ul class="listasFooter">
-                <li><a href="./Informacion/centro-de-ayuda.html">Centro de Ayuda</a></li>
-                <li><a href="./Informacion/arrepentimiento.html">Botón de Arrepentimiento</a></li>
-                <li><a href="https://www.gba.gob.ar/defensaconsumidores">Defensa al Consumidor</a></li>
-            </ul>
-            <div class="mediosDePago">
-                <h3>MEDIOS DE PAGO</h3>
-                <img src="./../Assets/visa.webp" alt="visa" class="btnTarjetas">
-                <img src="./../Assets/maestro.webp" alt="maestro" class="btnTarjetas">
-                <img src="./../Assets/master.webp" alt="master" class="btnTarjetas">
-                <img src="./../Assets/btc.webp" alt="btc" class="btnTarjetas">
+    <!-- pie de pagina-->
+    <footer class="footer">
+        <nav>
+            <div class="pie">
+                <h3>CATEGORIAS</h3>
+                <ul class="listasFooter">
+                    <li><a href="./../index.html">Inicio</a></li>
+                    <li><a href="./televisores.html">Televisores</a></li>
+                    <li><a href="./electrodomesticos.html">Electrodomésticos</a></li>
+                    <li><a href="./heladeras.html">Heladeras / Freezers</a></li>
+                    <li><a href="./varioshogar.html">Varios Hogar</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
-    <nav>
-        <div class="pie">
-            <h3>WALTER ELECTRO HOUSE</h3>
-            <ul class="listasFooter">
-                <li><a href="./About/walterelectrohouse.html">Quienes Somos?</a></li>
-                <li><a href="./About/walterelectrohouse.html#contacto">Contactanos</a></li>
-                <li><a href="./About/walterelectrohouse.html#ventaspormayor">Ventas por Mayor</a></li>
-            </ul>
-            <div class="redesSociales">
-                <a href="https://facebook.com">
-                    <img src="./../Assets/logoFacebook.webp" alt="Facebook" class="btnRedSocial"></a>
-                <a href="https://instagram.com">
-                    <img src="./../Assets/logoIG.webp" alt="Instagram" class="btnRedSocial"></a>
+        </nav>
+        <nav>
+            <div class="pie">
+                <h3>INFORMACION</h3>
+                <ul class="listasFooter">
+                    <li><a href="./Informacion/centro-de-ayuda.html">Centro de Ayuda</a></li>
+                    <li><a href="./Informacion/arrepentimiento.html">Botón de Arrepentimiento</a></li>
+                    <li><a href="https://www.gba.gob.ar/defensaconsumidores">Defensa al Consumidor</a></li>
+                </ul>
+                <div class="mediosDePago">
+                    <h3>MEDIOS DE PAGO</h3>
+                    <img src="./../Assets/visa.webp" alt="visa" class="btnTarjetas">
+                    <img src="./../Assets/maestro.webp" alt="maestro" class="btnTarjetas">
+                    <img src="./../Assets/master.webp" alt="master" class="btnTarjetas">
+                    <img src="./../Assets/btc.webp" alt="btc" class="btnTarjetas">
+                </div>
             </div>
+        </nav>
+        <nav>
+            <div class="pie">
+                <h3>WALTER ELECTRO HOUSE</h3>
+                <ul class="listasFooter">
+                    <li><a href="./About/walterelectrohouse.html">Quienes Somos?</a></li>
+                    <li><a href="./About/walterelectrohouse.html#contacto">Contactanos</a></li>
+                    <li><a href="./About/walterelectrohouse.html#ventaspormayor">Ventas por Mayor</a></li>
+                </ul>
+                <div class="redesSociales">
+                    <a href="https://facebook.com">
+                        <img src="./../Assets/logoFacebook.webp" alt="Facebook" class="btnRedSocial"></a>
+                    <a href="https://instagram.com">
+                        <img src="./../Assets/logoIG.webp" alt="Instagram" class="btnRedSocial"></a>
+                </div>
+            </div>
+        </nav>
+        <div class="div_logo_footer">
+            <img src="./../Assets/logoIndex.webp" class="logoFooter" alt="Walter Electro House Logo">
+            <p>FP® 2024</p>
         </div>
-    </nav>
-    <div class="div_logo_footer">
-        <img src="./../Assets/logoIndex.webp" class="logoFooter" alt="Walter Electro House Logo">
-        <p>FP® 2024</p>
-    </div>
-</footer>
+    </footer>
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
+
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
+        });
+    </script>
 </body>
 
 </html>

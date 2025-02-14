@@ -21,8 +21,10 @@
                 <img src="./../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./Carrito/carrito.html">
                 <img src="./../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -48,107 +50,171 @@
     </nav>
 
 
-  <!--productos-->
-  <main class="main-minH">
-    <div class="contenedor_cards">
-        <div class="card">
-            <img src="./../Assets/televisor1.webp" alt="Oferta 1" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 1</h5>
-                <p class="card-text">Esta es la oferta 1</p>
+    <!--productos-->
+    <main class="main-minH">
+        <div class="contenedor_cards">
+            <div class="card">
+                <img src="./../Assets/televisor1.webp" alt="Samsung 55' QLED 4K" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung 55" QLED 4K</h5>
+                    <p class="card-text">Pantalla QLED con Quantum HDR y tecnología de colores vivos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor2.webp" alt="LG 65' OLED evo" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">LG 65" OLED evo</h5>
+                    <p class="card-text">Negros puros y procesador α9 Gen 5 AI para una calidad cinematográfica.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor3.webp" alt="Sony Bravia 75' XR" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Sony Bravia 75" XR</h5>
+                    <p class="card-text">Cognitive Processor XR y tecnología Acoustic Surface Audio+.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor1.webp" alt="Hisense 50' ULED" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Hisense 50" ULED</h5>
+                    <p class="card-text">Dolby Vision HDR y sistema operativo VIDAA Smart TV.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor2.webp" alt="Philips 58' Ambilight" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Philips 58" Ambilight</h5>
+                    <p class="card-text">Ambilight LED envolvente y Android TV integrado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor3.webp" alt="TCL 65' Mini LED" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">TCL 65" Mini LED</h5>
+                    <p class="card-text">Mini LED con contraste mejorado y compatibilidad con Dolby Atmos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor1.webp" alt="Samsung 85' Neo QLED 8K" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung 85" Neo QLED 8K</h5>
+                    <p class="card-text">Resolución 8K real y procesador Quantum Neural AI.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor2.webp" alt="LG 77' OLED C2" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">LG 77" OLED C2</h5>
+                    <p class="card-text">Perfecto para gaming con 120Hz, NVIDIA G-Sync y Dolby Vision.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor3.webp" alt="Sony 55' X90J" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Sony 55" X90J</h5>
+                    <p class="card-text">Full Array LED con XR Motion Clarity para deportes y acción.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor1.webp" alt="Hisense 75' 4K HDR" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Hisense 75" 4K HDR</h5>
+                    <p class="card-text">Android TV con Google Assistant y Chromecast integrado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor2.webp" alt="Philips 70' Smart TV" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Philips 70" Smart TV</h5>
+                    <p class="card-text">Tecnología HDR10+ y altavoces envolventes DTS.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./../Assets/televisor3.webp" alt="TCL 50' Android TV" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">TCL 50" Android TV</h5>
+                    <p class="card-text">Pantalla 4K UHD con Google Assistant y control por voz.</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="./../Assets/televisor2.webp" alt="Oferta 2" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 2</h5>
-                <p class="card-text">Esta es la oferta 2</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./../Assets/televisor3.webp" alt="Oferta 3" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 3</h5>
-                <p class="card-text">Esta es la oferta 3</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./../Assets/televisor1.webp" alt="Oferta 1" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 1</h5>
-                <p class="card-text">Esta es la oferta 1</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./../Assets/televisor2.webp" alt="Oferta 2" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 2</h5>
-                <p class="card-text">Esta es la oferta 2</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./../Assets/televisor3.webp" alt="Oferta 3" class="card-img">
-            <div class="card-body">
-                <h5 class="card-title">Oferta 3</h5>
-                <p class="card-text">Esta es la oferta 3</p>
-            </div>
-        </div>
-    </div>
-</main>
+        
+    </main>
 
     <!-- pie de pagina-->
-<footer class="footer">
-    <nav>
-        <div class="pie">
-            <h3>CATEGORIAS</h3>
-            <ul class="listasFooter">
-                <li><a href="./../index.html">Inicio</a></li>
-                <li><a href="./celulares.html">Celulares</a></li>
-                <li><a href="./electrodomesticos.html">Electrodomésticos</a></li>
-                <li><a href="./heladeras.html">Heladeras / Freezers</a></li>
-                <li><a href="./varioshogar.html">Varios Hogar</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav>
-        <div class="pie">
-            <h3>INFORMACION</h3>
-            <ul class="listasFooter">
-                <li><a href="./Informacion/centro-de-ayuda.html">Centro de Ayuda</a></li>
-                <li><a href="./Informacion/arrepentimiento.html">Botón de Arrepentimiento</a></li>
-                <li><a href="https://www.gba.gob.ar/defensaconsumidores">Defensa al Consumidor</a></li>
-            </ul>
-            <div class="mediosDePago">
-                <h3>MEDIOS DE PAGO</h3>
-                <img src="./../Assets/visa.webp" alt="visa" class="btnTarjetas">
-                <img src="./../Assets/maestro.webp" alt="maestro" class="btnTarjetas">
-                <img src="./../Assets/master.webp" alt="master" class="btnTarjetas">
-                <img src="./../Assets/btc.webp" alt="btc" class="btnTarjetas">
+    <footer class="footer">
+        <nav>
+            <div class="pie">
+                <h3>CATEGORIAS</h3>
+                <ul class="listasFooter">
+                    <li><a href="./../index.html">Inicio</a></li>
+                    <li><a href="./celulares.html">Celulares</a></li>
+                    <li><a href="./electrodomesticos.html">Electrodomésticos</a></li>
+                    <li><a href="./heladeras.html">Heladeras / Freezers</a></li>
+                    <li><a href="./varioshogar.html">Varios Hogar</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
-    <nav>
-        <div class="pie">
-            <h3>WALTER ELECTRO HOUSE</h3>
-            <ul class="listasFooter">
-                <li><a href="./About/walterelectrohouse.html">Quienes Somos?</a></li>
-                <li><a href="./About/walterelectrohouse.html#contacto">Contactanos</a></li>
-                <li><a href="./About/walterelectrohouse.html#ventaspormayor">Ventas por Mayor</a></li>
-            </ul>
-            <div class="redesSociales">
-                <a href="https://facebook.com">
-                    <img src="./../Assets/logoFacebook.webp" alt="Facebook" class="btnRedSocial"></a>
-                <a href="https://instagram.com">
-                    <img src="./../Assets/logoIG.webp" alt="Instagram" class="btnRedSocial"></a>
+        </nav>
+        <nav>
+            <div class="pie">
+                <h3>INFORMACION</h3>
+                <ul class="listasFooter">
+                    <li><a href="./Informacion/centro-de-ayuda.html">Centro de Ayuda</a></li>
+                    <li><a href="./Informacion/arrepentimiento.html">Botón de Arrepentimiento</a></li>
+                    <li><a href="https://www.gba.gob.ar/defensaconsumidores">Defensa al Consumidor</a></li>
+                </ul>
+                <div class="mediosDePago">
+                    <h3>MEDIOS DE PAGO</h3>
+                    <img src="./../Assets/visa.webp" alt="visa" class="btnTarjetas">
+                    <img src="./../Assets/maestro.webp" alt="maestro" class="btnTarjetas">
+                    <img src="./../Assets/master.webp" alt="master" class="btnTarjetas">
+                    <img src="./../Assets/btc.webp" alt="btc" class="btnTarjetas">
+                </div>
             </div>
+        </nav>
+        <nav>
+            <div class="pie">
+                <h3>WALTER ELECTRO HOUSE</h3>
+                <ul class="listasFooter">
+                    <li><a href="./About/walterelectrohouse.html">Quienes Somos?</a></li>
+                    <li><a href="./About/walterelectrohouse.html#contacto">Contactanos</a></li>
+                    <li><a href="./About/walterelectrohouse.html#ventaspormayor">Ventas por Mayor</a></li>
+                </ul>
+                <div class="redesSociales">
+                    <a href="https://facebook.com">
+                        <img src="./../Assets/logoFacebook.webp" alt="Facebook" class="btnRedSocial"></a>
+                    <a href="https://instagram.com">
+                        <img src="./../Assets/logoIG.webp" alt="Instagram" class="btnRedSocial"></a>
+                </div>
+            </div>
+        </nav>
+        <div class="div_logo_footer">
+            <img src="./../Assets/logoIndex.webp" class="logoFooter" alt="Walter Electro House Logo">
+            <p>FP® 2024</p>
         </div>
-    </nav>
-    <div class="div_logo_footer">
-        <img src="./../Assets/logoIndex.webp" class="logoFooter" alt="Walter Electro House Logo">
-        <p>FP® 2024</p>
-    </div>
-</footer>
+    </footer>
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
 
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
+        });
+    </script>
 </body>
 
 </html>

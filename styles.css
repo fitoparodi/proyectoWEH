@@ -12401,6 +12401,11 @@ a {
   display: flex;
   justify-content: center;
 }
+#login p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
 
 #loginForm {
   display: flex;

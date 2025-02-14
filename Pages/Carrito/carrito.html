@@ -21,8 +21,10 @@
                 <img src="./../../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./carrito.html">
                 <img src="./../../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -47,9 +49,13 @@
         </div>
     </nav>
 
-    <!--productos-->
-    <main class="main-minH">
-        
+
+    <main class="main-minH container mt-5 text-center">
+        <div class="alert alert-warning p-4" role="alert">
+            <h2 class="mb-3">Oops! Parece que no iniciaste sesión</h2>
+            <p>Para ver tu carrito y finalizar tu compra, primero debes iniciar sesión.</p>
+            <a href="./../UserID/inicio-de-sesion.html" class="btn btn-primary">Iniciar Sesión</a>
+        </div>
     </main>
 
     <!-- pie de pagina-->
@@ -105,6 +111,29 @@
             <p>FP® 2024</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
+
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
+        });
+    </script>
 </body>
 
 </html>

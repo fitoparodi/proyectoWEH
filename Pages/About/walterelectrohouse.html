@@ -22,8 +22,10 @@
                 <img src="./../../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./../Carrito/carrito.html">
                 <img src="./../../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -48,13 +50,13 @@
         </div>
     </nav>
 
-    <!--productos-->
+
     <main id="about" class="container mt-4">
         <h1>Quiénes Somos</h1>
         <div class="videoContainer">
-        <video class="video" autoplay muted loop>
-            <source src="./../../Assets/quienessomos.mp4" type="video/mp4">
-        </video>
+            <video class="video" autoplay muted loop>
+                <source src="./../../Assets/quienessomos.mp4" type="video/mp4">
+            </video>
         </div>
         <div>
             <p>
@@ -63,30 +65,35 @@
                 brindarle a nuestros clientes la mejor calidad y el mejor precio en cada uno de nuestros productos.
             </p>
         </div>
-       
+
 
         <section id="contacto" class="mt-5">
             <h2>Contacto</h2>
-            <form id="contactForm">
+            <form id="contactFormContacto">
                 <div class="mb-3">
                     <label for="asunto" class="form-label">Asunto</label>
-                    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="Escribe el motivo del contacto" required>
+                    <input type="text" name="asunto" class="form-control" id="asunto"
+                        placeholder="Escribe el motivo del contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre y Apellido</label>
-                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escribe tu nombre y apellido" required>
+                    <input type="text" name="nombre" class="form-control" id="nombre"
+                        placeholder="Escribe tu nombre y apellido" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="tel" name="telefono" class="form-control" id="telefono" placeholder="Escribe un teléfono de contacto" required>
+                    <input type="tel" name="telefono" class="form-control" id="telefono"
+                        placeholder="Escribe un teléfono de contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Escribe tu correo electrónico" required>
+                    <input type="email" name="email" class="form-control" id="email"
+                        placeholder="Escribe tu correo electrónico" required>
                 </div>
                 <div class="mb-3">
                     <label for="consulta" class="form-label">Consulta</label>
-                    <textarea class="form-control" name="consulta" id="consulta" rows="3" placeholder="Escribe tu consulta" required></textarea>
+                    <textarea class="form-control" name="consulta" id="consulta" rows="3"
+                        placeholder="Escribe tu consulta" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -94,32 +101,37 @@
 
         <section id="ventaspormayor" class="mt-5">
             <h2>Ventas por Mayor</h2>
-            <form>
+            <form id="contactFormMayor">
                 <div class="mb-3">
                     <label for="asunto-mayor" class="form-label">Asunto</label>
-                    <input type="text" name="asunto" class="form-control" id="asunto-mayor" placeholder="Escribe el motivo del contacto" required>
+                    <input type="text" name="asunto" class="form-control" id="asunto-m"
+                        placeholder="Escribe el motivo del contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="nombre-mayor" class="form-label">Nombre y Apellido</label>
-                    <input type="text" name="nombre" class="form-control" id="nombre-mayor" placeholder="Escribe tu nombre y apellido" required>
+                    <input type="text" name="nombre" class="form-control" id="nombre-m"
+                        placeholder="Escribe tu nombre y apellido" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono-mayor" class="form-label">Teléfono</label>
-                    <input type="tel" name="telefono" class="form-control" id="telefono-mayor" placeholder="Escribe un teléfono de contacto" required>
+                    <input type="tel" name="telefono" class="form-control" id="telefono-m"
+                        placeholder="Escribe un teléfono de contacto" required>
                 </div>
                 <div class="mb-3">
                     <label for="email-mayor" class="form-label">Correo Electrónico</label>
-                    <input type="email" name="email" class="form-control" id="email-mayor" placeholder="Escribe tu correo electrónico" required>
+                    <input type="email" name="email" class="form-control" id="email-m"
+                        placeholder="Escribe tu correo electrónico" required>
                 </div>
                 <div class="mb-3">
                     <label for="consulta-mayor" class="form-label">Consulta</label>
-                    <textarea class="form-control" name="consulta" id="consulta-mayor" rows="3" placeholder="Escribe tu consulta" required></textarea>
+                    <textarea class="form-control" name="consulta" id="consulta-m" rows="3"
+                        placeholder="Escribe tu consulta" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </section>
     </main>
- 
+
     <!-- pie de pagina-->
     <footer class="footer">
         <nav>
@@ -176,24 +188,54 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            emailjs.init("PaoiXuj0YawQk5F9K"); // Inicializa EmailJS
-    
-            document.getElementById("contactForm").addEventListener("submit", function(event) {
-                event.preventDefault(); 
-    
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData.entries());
-    
-                emailjs.send("service_en8hxiw", "template_93wiqpd", data)
-                    .then(() => {
-                        alert("Correo enviado con éxito");
-                        this.reset();
-                    })
-                    .catch(error => {
-                        console.error("Error al enviar correo:", error);
-                        alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
-                    });
-            });
+            emailjs.init("PaoiXuj0YawQk5F9K");
+
+            function enviarCorreo(formId, templateId) {
+                const form = document.getElementById(formId);
+                if (!form) return;
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+
+                    emailjs.send("service_en8hxiw", templateId, data)
+                        .then(() => {
+                            alert("Correo enviado con éxito");
+                            form.reset();
+                        })
+                        .catch(error => {
+                            console.error("Error al enviar correo:", error);
+                            alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
+                        });
+                });
+            }
+            enviarCorreo("contactFormContacto", "template_93wiqpd");
+            enviarCorreo("contactFormMayor", "template_93wiqpd");
+        });
+    </script>
+
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
+
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
         });
     </script>
 </body>

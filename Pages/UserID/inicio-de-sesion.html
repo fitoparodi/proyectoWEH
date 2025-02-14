@@ -21,8 +21,10 @@
                 <img src="./../../Assets/account.webp" class="icono">Mi cuenta</a>
             <a class="boton" href="./../Carrito/carrito.html">
                 <img src="./../../Assets/carrito.webp" class="icono">Carrito</a>
-            <a class="boton">
-                <img src="./../../Assets/ubicacionICO.webp" class="icono">Ubicación</a>
+            <a class="boton" id="btnUbicacion">
+                <img src="./../../Assets/ubicacionICO.webp" class="icono"> Ubicación
+            </a>
+            <p id="ubicacionTexto"></p>
         </div>
     </header>
 
@@ -47,24 +49,29 @@
         </div>
     </nav>
 
-    <!--productos-->
+
     <main id="login" class="main-minH container mt-4">
 
         <h1>Iniciar Sesión</h1>
         <form id="loginForm">
             <div class="mb-3">
                 <label for="email-login" class="form-label">Correo Electrónico</label>
-                <input type="email" name="email" class="form-control" id="email-login" placeholder="Escribe tu correo electrónico" required>
+                <input type="email" name="email" class="form-control" id="email-login"
+                    placeholder="Escribe tu correo electrónico" required>
             </div>
             <div class="mb-3">
                 <label for="password-login" class="form-label">Contraseña</label>
-                <input type="password" name="password" class="form-control" id="password-login" placeholder="Escribe tu contraseña" required>
+                <input type="password" name="password" class="form-control" id="password-login"
+                    placeholder="Escribe tu contraseña" required>
             </div>
-            <button id="loginBtn" type="button" class="btn btn-primary">Log In</button>
-            <p id="loginMessage" style="display: none; color: red; font-weight: bold; text-align: center;">Próximamente</p>
+            <button id="loginBtn" type="button" class="btn btn-primary">Iniciar Sesión</button>
+            <p id="loginMessage" style="display: none; color: red; font-weight: bold; text-align: center;">Próximamente
+            </p>
             <button type="submit" class="btn btn-primary"><a href="./registro-de-usuario.html">Registrarse</a></button>
         </form>
     </main>
+
+
     <!-- pie de pagina-->
     <footer class="footer">
         <nav>
@@ -118,16 +125,40 @@
             <p>FP® 2024</p>
         </div>
     </footer>
+
     <script>
-    document.getElementById("loginBtn").addEventListener("click", function() {
-        let message = document.getElementById("loginMessage");
-        message.style.display = "block";
-    
-        // Opcional: Ocultar el mensaje después de unos segundos
-        setTimeout(() => {
-            message.style.display = "none";
-        }, 3000);
-    });
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            let message = document.getElementById("loginMessage");
+            message.style.display = "block";
+
+            // Opcional: Ocultar el mensaje después de unos segundos
+            setTimeout(() => {
+                message.style.display = "none";
+            }, 3000);
+        });
+    </script>
+
+    <script>
+        document.getElementById("btnUbicacion").addEventListener("click", function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const ubicacionTexto = `Latitud: ${lat}, Longitud: ${lon}`;
+                        document.getElementById("ubicacionTexto").innerText = ubicacionTexto;
+
+                        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                        window.open(mapsUrl, "_blank");
+                    },
+                    function (error) {
+                        alert("Error al obtener la ubicación. Asegúrate de haber dado permisos.");
+                    }
+                );
+            } else {
+                alert("Tu navegador no soporta la geolocalización.");
+            }
+        });
     </script>
 </body>
 
